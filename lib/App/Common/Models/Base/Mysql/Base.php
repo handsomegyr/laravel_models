@@ -22,8 +22,8 @@ class Base implements \App\Common\Models\Base\IBase
     {
         // $this->impl = new \App\Common\Models\Base\Mysql\Phalcon\Impl2($this);
         // $this->impl = new \App\Common\Models\Base\Mysql\Pdo\Impl($this);
-        // $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl1($this);
-        $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl2($this);
+        $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl1($this);
+        // $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl2($this);
     }
 
     public function setPhql($isPhql)
