@@ -20,10 +20,21 @@ class Base implements \App\Common\Models\Base\IBase
 
     public function __construct()
     {
-        // $this->impl = new \App\Common\Models\Base\Mysql\Phalcon\Impl2($this);
-        // $this->impl = new \App\Common\Models\Base\Mysql\Pdo\Impl($this);
-        $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl1($this);
-        // $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl2($this);
+        if (defined('LAVAREL_MODEL_DB_IMPLEMENT')) {
+            if (LAVAREL_MODEL_DB_IMPLEMENT == "PHALCON") {
+                $this->impl = new \App\Common\Models\Base\Mysql\Phalcon\Impl2($this);
+            } elseif (LAVAREL_MODEL_DB_IMPLEMENT == "PHALCON_PDO") {
+                $this->impl = new \App\Common\Models\Base\Mysql\Pdo\Impl($this);
+            } elseif (LAVAREL_MODEL_DB_IMPLEMENT == "PHALCON_LAVAREL") {
+                $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl1($this);
+            } elseif (LAVAREL_MODEL_DB_IMPLEMENT == "LAVAREL") {
+                $this->impl = new \App\Common\Models\Base\Mysql\Laraval\Impl2($this);
+            } else {
+                throw new \Exception("{LAVAREL_MODEL_DB_IMPLEMENT}定义的数据库连接实现未找到");
+            }
+        } else {
+            throw new \Exception("未定义数据库连接实现");
+        }
     }
 
     public function setPhql($isPhql)
