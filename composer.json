@@ -1,0 +1,22 @@
+{
+  "name" : "handsomegyr/laravel_model",
+  "description" : "A simple PHP model library for Business,using only laravel db facade",
+  "require" : {
+    "php" : ">=5.5",
+	"illuminate/database" : ">=5.1"
+  },
+  "authors" : [ {
+    "name" : "郭永荣",
+    "email" : "handsomegyr@gmail.com",
+    "homepage" : "http://github.com/handsomegyr/"
+  } ],
+  "keywords" : [ "model","laravel" ],
+  "autoload" : {
+    "psr-0" : {
+      "App" : "lib/"
+    }
+  },
+  "license" : "MIT",
+  "type" : "library",
+  "homepage" : "http://github.com/handsomegyr/laravel_models"
+}
