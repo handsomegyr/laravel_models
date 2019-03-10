@@ -191,7 +191,7 @@ class Impl1 extends Base
         $data = $insertFieldValues['values'];
         $result = $this->executeQuery($phql, $data, 'insert');
         // $_id = $insertFieldValues['id'];
-        $_id = $result['id'];
+        $_id = $result;
         return $this->findOne(array(
             'id' => $_id
         ));
@@ -206,7 +206,7 @@ class Impl1 extends Base
         $updateFieldValues = $sqlAndConditions['updateFieldValues'];
         $data = array_merge($updateFieldValues['values'], $conditions['bind']);
         $result = $this->executeQuery($phql, $data, 'update');
-        return $result;
+        // return $result;
     }
 
     public function remove(array $query)
@@ -217,7 +217,7 @@ class Impl1 extends Base
                 'deleted_at' => \getCurrentTime()
             )
         );
-        return $this->update($query, $object, $options);
+        $this->update($query, $object, $options);
     }
 
     public function physicalRemove(array $query)
@@ -226,7 +226,7 @@ class Impl1 extends Base
         $phql = $sqlAndConditions['sql'];
         $conditions = $sqlAndConditions['conditions'];
         $result = $this->executeQuery($phql, $conditions['bind'], 'delete');
-        return $result;
+        // return $result;
     }
 
     /**
@@ -343,7 +343,11 @@ class Impl1 extends Base
             // print_r($data);
             // die($phql);
             if ($method == "insert") {
-                $result['id'] = $conn->getPdo()->lastInsertId();
+                if ($result) {
+                    $result = $conn->getPdo()->lastInsertId();
+                } else {
+                    throw new \Exception("db insert operation is fail");
+                }
             }
             return $result;
         } catch (\Exception $e) {
