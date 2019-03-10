@@ -55,10 +55,10 @@ class Log extends \App\Common\Models\Payment\Log
             $otherConditions['type'] = $type;
         }
         if (! empty($beginTime)) {
-            $otherConditions['log_time']['$gte'] = getCurrentTime($beginTime);
+            $otherConditions['log_time']['$gte'] = \getCurrentTime($beginTime);
         }
         if (! empty($endTime)) {
-            $otherConditions['log_time']['$lte'] = getCurrentTime($endTime);
+            $otherConditions['log_time']['$lte'] = \getCurrentTime($endTime);
         }
         $list = $this->getPageList($page, $limit, $otherConditions);
         return $list;
@@ -71,7 +71,7 @@ class Log extends \App\Common\Models\Payment\Log
         $data['type'] = $type;
         $data['money'] = $money;
         $data['desc'] = $desc;
-        $data['log_time'] = getCurrentTime();
+        $data['log_time'] = \getCurrentTime();
         $data['memo'] = $memo;
         return $this->insert($data);
     }

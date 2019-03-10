@@ -38,7 +38,7 @@ class Subject extends \App\Common\Models\Vote\Subject
      */
     public function getQuery()
     {
-        $now = getCurrentTime();
+        $now = \getCurrentTime();
         $query = array(
             "is_closed" => false,
             'start_time' => array(

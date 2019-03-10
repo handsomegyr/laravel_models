@@ -106,9 +106,9 @@ class Member extends \App\Common\Models\Member\Member
         // 邀请人(推荐人)
         $userData['inviter_id'] = $inviter_id;
         // 注册时间
-        $userData['reg_time'] = getCurrentTime();
+        $userData['reg_time'] = \getCurrentTime();
         // 登录时间
-        $userData['login_time'] = getCurrentTime();
+        $userData['login_time'] = \getCurrentTime();
         // 登录IP
         $userData['login_ip'] = getIp();
         // 是否开启
@@ -142,7 +142,7 @@ class Member extends \App\Common\Models\Member\Member
                 'old_login_ip' => 'login_ip'
             ),
             '$set' => array(
-                'login_time' => getCurrentTime(),
+                'login_time' => \getCurrentTime(),
                 'login_ip' => getIp()
             ),
             '$inc' => array(

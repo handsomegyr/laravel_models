@@ -251,7 +251,7 @@ trait BaseTrait
         if (! isset($datas['id'])) {
             $datas = $this->setNewId($datas);
         }
-        $datas['created_at'] = $datas['updated_at'] = getCurrentTime();
+        $datas['created_at'] = $datas['updated_at'] = \getCurrentTime();
         
         foreach ($datas as $field => $value) {
             $fieldKey = "[{$field}]";
@@ -317,7 +317,7 @@ trait BaseTrait
             throw new \Exception("更新字段没有定义", - 999);
         } else {
             $field = 'updated_at';
-            $value = getCurrentTime();
+            $value = \getCurrentTime();
             $fieldKey = "[{$field}]";
             $fields[] = "{$fieldKey}=:{$field}:";
             $values[$field] = $this->changeValue4Save($value);
@@ -354,7 +354,7 @@ trait BaseTrait
         if (empty($field)) {
             return $field;
         }
-        return getCurrentTime(strtotime($field));
+        return \getCurrentTime(strtotime($field));
     }
 
     protected function getColumns(array $fields = array())

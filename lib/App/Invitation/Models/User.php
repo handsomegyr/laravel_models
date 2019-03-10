@@ -59,9 +59,9 @@ class User extends \App\Common\Models\Invitation\User
         $data['worth'] = $worth; // 价值
         $data['worth2'] = $worth2; // 价值2
         $data['lock'] = false; // 未锁定
-        $data['expire'] = getCurrentTime(); // 过期时间
+        $data['expire'] = \getCurrentTime(); // 过期时间
         $data['memo'] = $memo; // 备注
-        $data['log_time'] = getCurrentTime(); // 时间
+        $data['log_time'] = \getCurrentTime(); // 时间
         $info = $this->insert($data);
         return $info;
     }
@@ -121,7 +121,7 @@ class User extends \App\Common\Models\Invitation\User
         $options['update'] = array(
             '$set' => array(
                 'lock' => true,
-                'expire' => getCurrentTime(time() + 300)
+                'expire' => \getCurrentTime(time() + 300)
             )
         );
         $options['new'] = false; // 返回更新之前的值
@@ -155,7 +155,7 @@ class User extends \App\Common\Models\Invitation\User
         ), array(
             '$set' => array(
                 'lock' => false,
-                'expire' => getCurrentTime()
+                'expire' => \getCurrentTime()
             )
         ));
     }
@@ -170,7 +170,7 @@ class User extends \App\Common\Models\Invitation\User
         return $this->update(array(
             'id' => ($id),
             'expire' => array(
-                '$lte' => getCurrentTime()
+                '$lte' => \getCurrentTime()
             )
         ), array(
             '$set' => array(

@@ -13,7 +13,7 @@ class Code extends \App\Common\Models\Prize\Code
      */
     public function getCode($prize_id, $activity_id = '')
     {
-        $now = getCurrentTime();
+        $now = \getCurrentTime();
         $query = array(
             'id' => array(
                 '$ne' => '0123456789012345678901234'
@@ -81,10 +81,10 @@ class Code extends \App\Common\Models\Prize\Code
     public function create($prize_id, $code, $pwd = '', $is_used = false, $start_time = null, $end_time = null)
     {
         if (empty($start_time)) {
-            $start_time = getCurrentTime(strtotime('2016-01-01 00:00:00'));
+            $start_time = \getCurrentTime(strtotime('2016-01-01 00:00:00'));
         }
         if (empty($end_time)) {
-            $end_time = getCurrentTime(strtotime('2099-12-31 23:59:59'));
+            $end_time = \getCurrentTime(strtotime('2099-12-31 23:59:59'));
         }
         $data = array();
         $data['prize_id'] = $prize_id;

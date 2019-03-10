@@ -27,7 +27,7 @@ class Success extends \App\Common\Models\Exchange\Success
         $data['quantity'] = $quantity;
         $data['score'] = $score;
         $data['is_valid'] = true;
-        $data['exchange_time'] = getCurrentTime();
+        $data['exchange_time'] = \getCurrentTime();
         
         $data['rule_id'] = $rule_info['id'];
         

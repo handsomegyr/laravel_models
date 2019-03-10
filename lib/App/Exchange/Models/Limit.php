@@ -30,7 +30,7 @@ class Limit extends \App\Common\Models\Exchange\Limit
     {
         if ($this->_limits == null) {
             
-            $now = getCurrentTime();
+            $now = \getCurrentTime();
             $query = array(
                 'prize_id' => $prize_id,
                 'limit' => array(

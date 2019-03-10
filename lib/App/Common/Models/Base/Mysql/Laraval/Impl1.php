@@ -56,26 +56,17 @@ class Impl1 extends Base
 
     public function begin()
     {
-        return $this->getDI()
-            ->getDb()
-            ->getConnection()
-            ->beginTransaction();
+        return $this->getDbConnection()->beginTransaction();
     }
 
     public function commit()
     {
-        return $this->getDI()
-            ->getDb()
-            ->getConnection()
-            ->commit();
+        return $this->getDbConnection()->commit();
     }
 
     public function rollback()
     {
-        return $this->getDI()
-            ->getDb()
-            ->getConnection()
-            ->rollBack();
+        return $this->getDbConnection()->rollBack();
     }
 
     public function count(array $query)
@@ -84,7 +75,7 @@ class Impl1 extends Base
         $sqlAndConditions = $this->getSqlAndConditions4Count($query);
         $phql = $sqlAndConditions['sql'];
         $conditions = $sqlAndConditions['conditions'];
-        $result = $this->executeQuery($phql, $conditions['bind'], 'select');
+        $result = $this->executeQuery($phql, $conditions['bind'], 'selectOne');
         // $result = $result->fetch();
         if (! empty($result)) {
             $num = $result['num'];
@@ -125,7 +116,7 @@ class Impl1 extends Base
         
         $sqlAndConditions = $this->getSqlAndConditions4Find($query, $sort, $skip, $limit, $fields);
         $phql = $sqlAndConditions['sql'];
-        $conditions = $sqlAndConditions['conditions'];        
+        $conditions = $sqlAndConditions['conditions'];
         $ret = $result = $this->executeQuery($phql, $conditions['bind'], 'select');
         // $ret = $result->fetchAll();
         $list = array();
@@ -223,7 +214,7 @@ class Impl1 extends Base
         $options = array();
         $object = array(
             '$set' => array(
-                'deleted_at' => getCurrentTime()
+                'deleted_at' => \getCurrentTime()
             )
         );
         return $this->update($query, $object, $options);
@@ -342,19 +333,17 @@ class Impl1 extends Base
                 die('OK');
             }
             
-            $db = $this->getDI()->getDb();
+            $conn = $this->getDbConnection();
             // var_dump($db);
-            $db->setFetchMode(PDO::FETCH_ASSOC);
-            //print_r($data);
-            //die($phql);
-            $result = $db->getConnection()->$method($phql, $data);
+            $conn->setFetchMode(PDO::FETCH_ASSOC);
+            // print_r($data);
+            // die($phql);
+            $result = $conn->$method($phql, $data);
             // var_dump($result);
             // print_r($data);
             // die($phql);
             if ($method == "insert") {
-                $result['id'] = $db->getConnection()
-                    ->getPdo()
-                    ->lastInsertId();
+                $result['id'] = $conn->getPdo()->lastInsertId();
             }
             return $result;
         } catch (\Exception $e) {
@@ -376,5 +365,12 @@ class Impl1 extends Base
             unset($datas['id']);
         }
         return $datas;
+    }
+
+    protected function getDbConnection()
+    {
+        return $this->getDI()
+            ->getDb()
+            ->getConnection();
     }
 }

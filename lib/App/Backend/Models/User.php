@@ -49,7 +49,7 @@ class User extends \App\Common\Models\System\User
         $data = array(
             '$set' => array(
                 'lastip' => getIp(),
-                'lasttime' => getCurrentTime()
+                'lasttime' => \getCurrentTime()
             ),
             '$inc' => array(
                 'times' => 1
@@ -85,7 +85,7 @@ class User extends \App\Common\Models\System\User
         $userData['username'] = $username;
         $userData['password'] = $password;
         $userData['lastip'] = getIp();
-        $userData['lasttime'] = getCurrentTime();
+        $userData['lasttime'] = \getCurrentTime();
         $userData['times'] = 1;
         $userData = $this->insert($userData);
         return $userData;

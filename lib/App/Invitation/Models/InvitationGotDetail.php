@@ -48,7 +48,7 @@ class InvitationGotDetail extends \App\Common\Models\Invitation\InvitationGotDet
         $data['got_user_id'] = $got_user_id; // 领邀请函的user_id
         $data['got_user_name'] = $got_user_name; // 领邀请函的用户名
         $data['got_user_headimgurl'] = $got_user_headimgurl; // 领邀请函的头像
-        $data['got_time'] = getCurrentTime(); // 获取时间
+        $data['got_time'] = \getCurrentTime(); // 获取时间
         $data['got_worth'] = $got_worth; // 获取价值
         $data['got_worth2'] = $got_worth2; // 获取价值2
         $data['memo'] = $memo; // 备注

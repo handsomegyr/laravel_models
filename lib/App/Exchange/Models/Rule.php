@@ -52,10 +52,10 @@ class Rule extends \App\Common\Models\Exchange\Rule
         }
         $query = array();
         $query['start_time'] = array(
-            '$lte' => getCurrentTime($date)
+            '$lte' => \getCurrentTime($date)
         );
         $query['end_time'] = array(
-            '$gt' => getCurrentTime($date)
+            '$gt' => \getCurrentTime($date)
         );
         if ($score)
             $query['score'] = array(

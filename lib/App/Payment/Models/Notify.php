@@ -33,7 +33,7 @@ class Notify extends \App\Common\Models\Payment\Notify
         $data = array();
         $data['out_trade_no'] = $out_trade_no;
         $data['content'] = $content;
-        $data['notify_time'] = getCurrentTime();
+        $data['notify_time'] = \getCurrentTime();
         return $this->insert($data);
     }
 }

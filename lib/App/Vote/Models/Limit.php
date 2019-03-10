@@ -31,7 +31,7 @@ class Limit extends \App\Common\Models\Vote\Limit
      */
     public function getQuery()
     {
-        $now = getCurrentTime();
+        $now = \getCurrentTime();
         $query = array(
             'start_time' => array(
                 '$lte' => $now

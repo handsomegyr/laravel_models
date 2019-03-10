@@ -88,10 +88,10 @@ class Log extends \App\Common\Models\Points\Log
             'category' => $category
         );
         if (! empty($beginTime)) {
-            $query['add_time']['$gte'] = getCurrentTime($beginTime);
+            $query['add_time']['$gte'] = \getCurrentTime($beginTime);
         }
         if (! empty($endTime)) {
-            $query['add_time']['$lte'] = getCurrentTime($endTime);
+            $query['add_time']['$lte'] = \getCurrentTime($endTime);
         }
         if (! empty($otherConditions)) {
             $query = array_merge($query, $otherConditions);

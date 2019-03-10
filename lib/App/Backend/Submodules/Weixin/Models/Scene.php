@@ -25,7 +25,7 @@ class Scene extends \App\Common\Models\Weixin\Scene
         $query['id'] = $scene['id'];
         
         $data['ticket'] = $ticket;
-        $data['ticket_time'] = getCurrentTime();
+        $data['ticket_time'] = \getCurrentTime();
         $data['is_created'] = true;
         $this->update($query, array(
             '$set' => $data

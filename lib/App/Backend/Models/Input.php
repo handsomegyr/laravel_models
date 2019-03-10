@@ -93,10 +93,10 @@ class Input extends \stdClass
                             $datetime = urldecode($filter[$key]);
                             $datatimeArr = explode('|', $datetime);
                             if (! empty($datatimeArr[0])) {
-                                $where[$key]['$gte'] = getCurrentTime(strtotime($datatimeArr[0]));
+                                $where[$key]['$gte'] = \getCurrentTime(strtotime($datatimeArr[0]));
                             }
                             if (! empty($datatimeArr[1])) {
-                                $where[$key]['$lte'] = getCurrentTime(strtotime($datatimeArr[1]));
+                                $where[$key]['$lte'] = \getCurrentTime(strtotime($datatimeArr[1]));
                             }
                         } elseif ($field['data']['type'] == "integer") {
                             $num = urldecode($filter[$key]);
@@ -171,9 +171,9 @@ class Input extends \stdClass
                     }
                 } elseif ($field['data']['type'] == "datetime") {
                     if (isset($this->$key) && $is_update) {
-                        $data[$key] = getCurrentTime(strtotime($this->$key));
+                        $data[$key] = \getCurrentTime(strtotime($this->$key));
                     } else {
-                        $data[$key] = isset($field['data']['defaultValue']) ? $field['data']['defaultValue'] : getCurrentTime();
+                        $data[$key] = isset($field['data']['defaultValue']) ? $field['data']['defaultValue'] : \getCurrentTime();
                     }
                 } elseif ($field['data']['type'] == "boolean") {
                     if (isset($this->$key) && $is_update) {

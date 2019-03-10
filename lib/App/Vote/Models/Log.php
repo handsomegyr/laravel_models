@@ -35,7 +35,7 @@ class Log extends \App\Common\Models\Vote\Log
         $data['activity'] = $activity;
         $data['subject'] = $subject;
         $data['item'] = $item;
-        $data['vote_time'] = getCurrentTime();
+        $data['vote_time'] = \getCurrentTime();
         $data['identity'] = $identity;
         $data['ip'] = getIp();
         $data['session_id'] = session_id();

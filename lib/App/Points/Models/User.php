@@ -83,7 +83,7 @@ class User extends \App\Common\Models\Points\User
     public function addOrReduce($category, $user_id, $user_name, $user_headimgurl, $uniqueId, $add_time, $points, $stage, $desc)
     {
         if (empty($add_time)) {
-            $add_time = getCurrentTime();
+            $add_time = \getCurrentTime();
         }
         $lockKey = cacheKey(__FILE__, __CLASS__, __METHOD__, $uniqueId, $category);
         $objLock = new \iLock($lockKey);
@@ -207,7 +207,7 @@ class User extends \App\Common\Models\Points\User
         $data['freeze'] = $freeze; // 冻结积分
         $data['consume'] = $consume; // 消费积分
         $data['expire'] = $expire; // 过期积分
-        $data['point_time'] = getCurrentTime(); // 积分时间
+        $data['point_time'] = \getCurrentTime(); // 积分时间
         $data['memo'] = $memo; // 备注
         $info = $this->insert($data);
         return $info;
