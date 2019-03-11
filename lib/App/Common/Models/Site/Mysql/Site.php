@@ -8,10 +8,10 @@ class Site extends Base
 
     /**
      * 网站-网站表管理
-     * This model is mapped to the table isite_site
+     * This model is mapped to the table site_site
      */
     public function getSource()
     {
-        return 'isite_site';
+        return 'site_site';
     }
 }

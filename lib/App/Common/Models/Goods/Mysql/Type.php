@@ -8,11 +8,11 @@ class Type extends Base
 
     /**
      * 商品类型表管理
-     * This model is mapped to the table igoods_type
+     * This model is mapped to the table goods_type
      */
     public function getSource()
     {
-        return 'igoods_type';
+        return 'goods_type';
     }
 
     public function reorganize(array $data)

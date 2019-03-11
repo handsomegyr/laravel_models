@@ -8,11 +8,11 @@ class Limit extends Base
 
     /**
      * 投票-选项表管理
-     * This model is mapped to the table ivote_limit
+     * This model is mapped to the table vote_limit
      */
     public function getSource()
     {
-        return 'ivote_limit';
+        return 'vote_limit';
     }
     
     public function reorganize(array $data)

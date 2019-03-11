@@ -8,11 +8,11 @@ class Subject extends Base
 
     /**
      * 投票-主题表管理
-     * This model is mapped to the table ivote_subject
+     * This model is mapped to the table vote_subject
      */
     public function getSource()
     {
-        return 'ivote_subject';
+        return 'vote_subject';
     }
     
     public function reorganize(array $data)

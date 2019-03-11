@@ -8,11 +8,11 @@ class Post extends Base
     
     /**
      * 帖子-帖子表管理
-     * This model is mapped to the table ipost_post
+     * This model is mapped to the table post_post
      */
     public function getSource()
     {
-        return 'ipost_post';
+        return 'post_post';
     }
 
     public function reorganize(array $data)

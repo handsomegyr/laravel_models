@@ -8,11 +8,11 @@ class Article extends Base
 
     /**
      * 文章-文章管理
-     * This model is mapped to the table iarticle_article
+     * This model is mapped to the table article_article
      */
     public function getSource()
     {
-        return 'iarticle_article';
+        return 'article_article';
     }
 
     public function reorganize(array $data)

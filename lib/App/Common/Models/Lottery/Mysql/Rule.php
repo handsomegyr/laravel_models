@@ -8,11 +8,11 @@ class Rule extends Base
 
     /**
      * 抽奖概率管理
-     * This model is mapped to the table ilottery_rule
+     * This model is mapped to the table lottery_rule
      */
     public function getSource()
     {
-        return 'ilottery_rule';
+        return 'lottery_rule';
     }
 
     public function reorganize(array $data)

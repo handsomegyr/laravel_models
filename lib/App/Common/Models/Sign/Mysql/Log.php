@@ -5,11 +5,11 @@ class Log extends Base
 {
     /**
      * 签到-签到日志管理
-     * This model is mapped to the table isign_log
+     * This model is mapped to the table sign_log
      */
     public function getSource()
     {
-        return 'isign_log';
+        return 'sign_log';
     }
     public function reorganize(array $data)
     {

@@ -8,11 +8,11 @@ class User extends Base
 
     /**
      * 积分-积分用户表管理
-     * This model is mapped to the table ipoints_user
+     * This model is mapped to the table points_user
      */
     public function getSource()
     {
-        return 'ipoints_user';
+        return 'points_user';
     }
 
     public function reorganize(array $data)

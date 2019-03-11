@@ -8,11 +8,11 @@ class Pay extends Base
 
     /**
      * 订单-支付表管理
-     * This model is mapped to the table iorder_pay
+     * This model is mapped to the table order_pay
      */
     public function getSource()
     {
-        return 'iorder_pay';
+        return 'order_pay';
     }
 
     public function reorganize(array $data)

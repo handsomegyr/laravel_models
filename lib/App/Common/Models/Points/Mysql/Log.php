@@ -8,11 +8,11 @@ class Log extends Base
 
     /**
      * 积分-积分日志表管理
-     * This model is mapped to the table ipoints_log
+     * This model is mapped to the table points_log
      */
     public function getSource()
     {
-        return 'ipoints_log';
+        return 'points_log';
     }
 
     public function reorganize(array $data)

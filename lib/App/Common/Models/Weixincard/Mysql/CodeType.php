@@ -8,10 +8,10 @@ class CodeType extends Base
 
     /**
      * 微信卡券-code码展示类型
-     * This model is mapped to the table iweixincard_code_type
+     * This model is mapped to the table weixincard_code_type
      */
     public function getSource()
     {
-        return 'iweixincard_code_type';
+        return 'weixincard_code_type';
     }
 }

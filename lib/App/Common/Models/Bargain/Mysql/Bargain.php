@@ -8,11 +8,11 @@ class Bargain extends Base
 
     /**
      * 砍价-砍价物规则管理
-     * This model is mapped to the table ibargain_bargain
+     * This model is mapped to the table bargain_bargain
      */
     public function getSource()
     {
-        return 'ibargain_bargain';
+        return 'bargain_bargain';
     }
 
     public function reorganize(array $data)

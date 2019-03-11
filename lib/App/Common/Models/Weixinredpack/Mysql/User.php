@@ -8,11 +8,11 @@ class User extends Base
 
     /**
      * 微信红包-红包用户管理
-     * This model is mapped to the table iweixinredpack_user
+     * This model is mapped to the table weixinredpack_user
      */
     public function getSource()
     {
-        return 'iweixinredpack_user';
+        return 'weixinredpack_user';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Suggestion extends Base
 
     /**
      * 网站-投诉与建议表管理
-     * This model is mapped to the table isite_suggestion
+     * This model is mapped to the table site_suggestion
      */
     public function getSource()
     {
-        return 'isite_suggestion';
+        return 'site_suggestion';
     }
 
     public function reorganize(array $data)

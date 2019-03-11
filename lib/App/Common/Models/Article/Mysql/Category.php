@@ -8,10 +8,10 @@ class Category extends Base
 
     /**
      * 文章-分类管理
-     * This model is mapped to the table iarticle_category
+     * This model is mapped to the table article_category
      */
     public function getSource()
     {
-        return 'iarticle_category';
+        return 'article_category';
     }
 }

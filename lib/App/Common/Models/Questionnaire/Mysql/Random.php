@@ -8,11 +8,11 @@ class Random extends Base
 
     /**
      * 问卷-随机题库管理
-     * This model is mapped to the table iquestionnaire_random
+     * This model is mapped to the table questionnaire_random
      */
     public function getSource()
     {
-        return 'iquestionnaire_random';
+        return 'questionnaire_random';
     }
 
     public function reorganize(array $data)

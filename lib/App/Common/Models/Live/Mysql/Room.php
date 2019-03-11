@@ -8,11 +8,11 @@ class Room extends Base
 
     /**
      * 直播-房间管理
-     * This model is mapped to the table ilive_room
+     * This model is mapped to the table live_room
      */
     public function getSource()
     {
-        return 'ilive_room';
+        return 'live_room';
     }
 
     public function reorganize(array $data)

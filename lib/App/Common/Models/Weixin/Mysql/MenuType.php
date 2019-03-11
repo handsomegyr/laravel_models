@@ -8,10 +8,10 @@ class MenuType extends Base
 
     /**
      * 微信菜单类型
-     * This model is mapped to the table iweixin_menu_type
+     * This model is mapped to the table weixin_menu_type
      */
     public function getSource()
     {
-        return 'iweixin_menu_type';
+        return 'weixin_menu_type';
     }
 }

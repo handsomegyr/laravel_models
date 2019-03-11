@@ -8,11 +8,11 @@ class Express extends Base
 
     /**
      * 运价-快递公司管理
-     * This model is mapped to the table ifreight_express
+     * This model is mapped to the table freight_express
      */
     public function getSource()
     {
-        return 'ifreight_express';
+        return 'freight_express';
     }
 
     public function reorganize(array $data)

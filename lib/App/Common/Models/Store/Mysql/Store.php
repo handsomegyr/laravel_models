@@ -8,11 +8,11 @@ class Store extends Base
 
     /**
      * 门店-门店表管理
-     * This model is mapped to the table istore_store
+     * This model is mapped to the table store_store
      */
     public function getSource()
     {
-        return 'istore_store';
+        return 'store_store';
     }
 
     public function reorganize(array $data)

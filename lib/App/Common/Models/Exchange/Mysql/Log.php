@@ -8,10 +8,10 @@ class Log extends Base
 
     /**
      * 兑换-日志
-     * This model is mapped to the table iexchange_log
+     * This model is mapped to the table exchange_log
      */
     public function getSource()
     {
-        return 'iexchange_log';
+        return 'exchange_log';
     }
 }

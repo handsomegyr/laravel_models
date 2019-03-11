@@ -8,11 +8,11 @@ class Rule extends Base
 
     /**
      * 微信红包-红包发放规则
-     * This model is mapped to the table iweixinredpack_rule
+     * This model is mapped to the table weixinredpack_rule
      */
     public function getSource()
     {
-        return 'iweixinredpack_rule';
+        return 'weixinredpack_rule';
     }
 
     public function reorganize(array $data)

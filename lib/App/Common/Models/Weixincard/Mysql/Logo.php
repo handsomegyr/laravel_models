@@ -8,11 +8,11 @@ class Logo extends Base
 
     /**
      * 微信卡券-商户logo
-     * This model is mapped to the table iweixincard_logo
+     * This model is mapped to the table weixincard_logo
      */
     public function getSource()
     {
-        return 'iweixincard_logo';
+        return 'weixincard_logo';
     }
 
     public function reorganize(array $data)

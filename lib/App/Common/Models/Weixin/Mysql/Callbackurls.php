@@ -8,10 +8,10 @@ class Callbackurls extends Base
 
     /**
      * 微信回调地址安全域名
-     * This model is mapped to the table iweixin_callbackurls
+     * This model is mapped to the table weixin_callbackurls
      */
     public function getSource()
     {
-        return 'iweixin_callbackurls';
+        return 'weixin_callbackurls';
     }
 }

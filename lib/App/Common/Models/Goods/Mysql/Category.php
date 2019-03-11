@@ -8,11 +8,11 @@ class Category extends Base
 
     /**
      * 商品分类表管理
-     * This model is mapped to the table igoods_category
+     * This model is mapped to the table goods_category
      */
     public function getSource()
     {
-        return 'igoods_category';
+        return 'goods_category';
     }
 
     public function reorganize(array $data)

@@ -8,10 +8,10 @@ class AlphaUser extends Base
 
     /**
      * 砍价-砍价用户系数表
-     * This model is mapped to the table ibargain_alpha_user
+     * This model is mapped to the table bargain_alpha_user
      */
     public function getSource()
     {
-        return 'ibargain_alpha_user';
+        return 'bargain_alpha_user';
     }
 }

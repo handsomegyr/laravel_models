@@ -8,11 +8,11 @@ class Card extends Base
 
     /**
      * 微信卡券-卡券
-     * This model is mapped to the table iweixincard_card
+     * This model is mapped to the table weixincard_card
      */
     public function getSource()
     {
-        return 'iweixincard_card';
+        return 'weixincard_card';
     }
 
     public function reorganize(array $data)

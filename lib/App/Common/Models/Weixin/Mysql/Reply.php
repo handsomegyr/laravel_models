@@ -8,11 +8,11 @@ class Reply extends Base
 
     /**
      * 微信自动回复设定
-     * This model is mapped to the table iweixin_reply
+     * This model is mapped to the table weixin_reply
      */
     public function getSource()
     {
-        return 'iweixin_reply';
+        return 'weixin_reply';
     }
 
     public function reorganize(array $data)

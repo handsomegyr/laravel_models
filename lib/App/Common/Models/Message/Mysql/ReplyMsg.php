@@ -8,11 +8,11 @@ class ReplyMsg extends Base
 
     /**
      * 消息-回复消息表管理
-     * This model is mapped to the table imessage_replymsg
+     * This model is mapped to the table message_replymsg
      */
     public function getSource()
     {
-        return 'imessage_replymsg';
+        return 'message_replymsg';
     }
 
     public function reorganize(array $data)

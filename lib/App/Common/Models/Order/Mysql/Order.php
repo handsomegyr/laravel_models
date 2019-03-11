@@ -8,11 +8,11 @@ class Order extends Base
 
     /**
      * 订单-订单表管理
-     * This model is mapped to the table iorder_order
+     * This model is mapped to the table order_order
      */
     public function getSource()
     {
-        return 'iorder_order';
+        return 'order_order';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Vote extends Base
 
     /**
      * 帖子-投票管理
-     * This model is mapped to the table ipost_vote
+     * This model is mapped to the table post_vote
      */
     public function getSource()
     {
-        return 'ipost_vote';
+        return 'post_vote';
     }
 
     public function reorganize(array $data)

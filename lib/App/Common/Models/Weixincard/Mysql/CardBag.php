@@ -8,11 +8,11 @@ class CardBag extends Base
 
     /**
      * 微信卡券-卡包
-     * This model is mapped to the table iweixincard_card_bag
+     * This model is mapped to the table weixincard_card_bag
      */
     public function getSource()
     {
-        return 'iweixincard_card_bag';
+        return 'weixincard_card_bag';
     }
 
     public function reorganize(array $data)

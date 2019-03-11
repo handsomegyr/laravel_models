@@ -8,11 +8,11 @@ class Answer extends Base
 
     /**
      * 问卷-答案管理
-     * This model is mapped to the table iquestionnaire_answer
+     * This model is mapped to the table questionnaire_answer
      */
     public function getSource()
     {
-        return 'iquestionnaire_answer';
+        return 'questionnaire_answer';
     }
 
     public function reorganize(array $data)

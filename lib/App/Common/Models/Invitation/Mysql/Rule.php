@@ -8,11 +8,11 @@ class Rule extends Base
 
     /**
      * 邀请-规则
-     * This model is mapped to the table iinvitation_rule
+     * This model is mapped to the table invitation_rule
      */
     public function getSource()
     {
-        return 'iinvitation_rule';
+        return 'invitation_rule';
     }
 
     public function reorganize(array $data)

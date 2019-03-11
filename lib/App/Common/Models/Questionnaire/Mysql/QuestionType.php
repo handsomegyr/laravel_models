@@ -8,11 +8,11 @@ class QuestionType extends Base
 
     /**
      * 问卷-题型管理
-     * This model is mapped to the table iquestionnaire_question_type
+     * This model is mapped to the table questionnaire_question_type
      */
     public function getSource()
     {
-        return 'iquestionnaire_question_type';
+        return 'questionnaire_question_type';
     }
 }
 

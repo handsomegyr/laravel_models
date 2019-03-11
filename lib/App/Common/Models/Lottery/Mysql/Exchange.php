@@ -8,11 +8,11 @@ class Exchange extends Base
 
     /**
      * 抽奖中奖信息
-     * This model is mapped to the table ilottery_exchange
+     * This model is mapped to the table lottery_exchange
      */
     public function getSource()
     {
-        return 'ilottery_exchange';
+        return 'lottery_exchange';
     }
 
     public function reorganize(array $data)

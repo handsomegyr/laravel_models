@@ -8,11 +8,11 @@ class Visitor extends Base
 
     /**
      * 会员-访客管理
-     * This model is mapped to the table imember_visitor
+     * This model is mapped to the table member_visitor
      */
     public function getSource()
     {
-        return 'imember_visitor';
+        return 'member_visitor';
     }
 
     public function reorganize(array $data)

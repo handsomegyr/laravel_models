@@ -8,11 +8,11 @@ class Testwhitelist extends Base
 
     /**
      * 微信卡券-设置测试用户白名单
-     * This model is mapped to the table iweixincard_testwhitelist
+     * This model is mapped to the table weixincard_testwhitelist
      */
     public function getSource()
     {
-        return 'iweixincard_testwhitelist';
+        return 'weixincard_testwhitelist';
     }
 
     public function reorganize(array $data)

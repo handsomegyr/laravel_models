@@ -8,11 +8,11 @@ class Code extends Base
 
     /**
      * 奖品-券码
-     * This model is mapped to the table iprize_code
+     * This model is mapped to the table prize_code
      */
     public function getSource()
     {
-        return 'iprize_code';
+        return 'prize_code';
     }
 
     public function reorganize(array $data)

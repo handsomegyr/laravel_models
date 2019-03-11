@@ -8,11 +8,11 @@ class ComponentApplication extends Base
 
     /**
      * 第三方平台应用管理
-     * This model is mapped to the table iweixin_component_application
+     * This model is mapped to the table weixin_component_application
      */
     public function getSource()
     {
-        return 'iweixin_component_application';
+        return 'weixin_component_application';
     }
 
     public function reorganize(array $data)

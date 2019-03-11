@@ -8,11 +8,11 @@ class Settings extends Base
 
     /**
      * 邮件-邮件设置表管理
-     * This model is mapped to the table imail_settings
+     * This model is mapped to the table mail_settings
      */
     public function getSource()
     {
-        return 'imail_settings';
+        return 'mail_settings';
     }
 
     public function reorganize(array $data)

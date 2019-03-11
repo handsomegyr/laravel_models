@@ -8,11 +8,11 @@ class Banner extends Base
 
     /**
      * 网站-广告位表管理
-     * This model is mapped to the table isite_banner
+     * This model is mapped to the table site_banner
      */
     public function getSource()
     {
-        return 'isite_banner';
+        return 'site_banner';
     }
     public function reorganize(array $data)
     {

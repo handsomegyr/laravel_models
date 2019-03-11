@@ -8,11 +8,11 @@ class Fcode extends Base
 
     /**
      * 商品F码管理
-     * This model is mapped to the table igoods_fcode
+     * This model is mapped to the table goods_fcode
      */
     public function getSource()
     {
-        return 'igoods_fcode';
+        return 'goods_fcode';
     }
 
     public function reorganize(array $data)

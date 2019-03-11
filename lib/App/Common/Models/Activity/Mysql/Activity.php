@@ -8,11 +8,11 @@ class Activity extends Base
 
     /**
      * 活动-活动表管理
-     * This model is mapped to the table iactivity_activity
+     * This model is mapped to the table activity_activity
      */
     public function getSource()
     {
-        return 'iactivity_activity';
+        return 'activity_activity';
     }
 
     public function reorganize(array $data)

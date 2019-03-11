@@ -8,10 +8,10 @@ class Rule extends Base
 
     /**
      * 积分-积分规则表管理
-     * This model is mapped to the table ipoints_rule
+     * This model is mapped to the table points_rule
      */
     public function getSource()
     {
-        return 'ipoints_rule';
+        return 'points_rule';
     }
 }

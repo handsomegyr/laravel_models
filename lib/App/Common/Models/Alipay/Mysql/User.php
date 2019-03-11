@@ -8,11 +8,11 @@ class User extends Base
 
     /**
      * 支付宝-用户管理
-     * This model is mapped to the table ialipay_user
+     * This model is mapped to the table alipay_user
      */
     public function getSource()
     {
-        return 'ialipay_user';
+        return 'alipay_user';
     }
 
     public function reorganize(array $data)

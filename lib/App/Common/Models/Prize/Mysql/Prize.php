@@ -8,11 +8,11 @@ class Prize extends Base
 
     /**
      * 奖品-奖品
-     * This model is mapped to the table iprize_prize
+     * This model is mapped to the table prize_prize
      */
     public function getSource()
     {
-        return 'iprize_prize';
+        return 'prize_prize';
     }
 
     public function reorganize(array $data)

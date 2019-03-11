@@ -8,11 +8,11 @@ class CodeDeposit extends Base
 
     /**
      * 微信卡券-code导入
-     * This model is mapped to the table iweixincard_code_deposit
+     * This model is mapped to the table weixincard_code_deposit
      */
     public function getSource()
     {
-        return 'iweixincard_code_deposit';
+        return 'weixincard_code_deposit';
     }
 
     public function reorganize(array $data)

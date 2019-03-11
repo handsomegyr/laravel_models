@@ -8,11 +8,11 @@ class User extends Base
 
     /**
      * 微信邀请-用户表管理
-     * This model is mapped to the table iinvitation_user
+     * This model is mapped to the table invitation_user
      */
     public function getSource()
     {
-        return 'iinvitation_user';
+        return 'invitation_user';
     }
 
     public function reorganize(array $data)

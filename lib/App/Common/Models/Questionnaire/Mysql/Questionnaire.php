@@ -8,11 +8,11 @@ class Questionnaire extends Base
 
     /**
      * 问卷-问卷管理
-     * This model is mapped to the table iquestionnaire_questionnaire
+     * This model is mapped to the table questionnaire_questionnaire
      */
     public function getSource()
     {
-        return 'iquestionnaire_questionnaire';
+        return 'questionnaire_questionnaire';
     }
 
     public function reorganize(array $data)

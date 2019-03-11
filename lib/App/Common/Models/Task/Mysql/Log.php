@@ -8,11 +8,11 @@ class Log extends Base
 
     /**
      * 任务-日志管理
-     * This model is mapped to the table itask_log
+     * This model is mapped to the table task_log
      */
     public function getSource()
     {
-        return 'itask_log';
+        return 'task_log';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Friend extends Base
 
     /**
      * 会员-好友管理
-     * This model is mapped to the table imember_friend
+     * This model is mapped to the table member_friend
      */
     public function getSource()
     {
-        return 'imember_friend';
+        return 'member_friend';
     }
 
     public function reorganize(array $data)

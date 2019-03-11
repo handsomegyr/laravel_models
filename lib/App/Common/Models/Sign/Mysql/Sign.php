@@ -5,11 +5,11 @@ class Sign extends Base
 {
     /**
      * 签到-用户签到管理
-     * This model is mapped to the table isign_sign
+     * This model is mapped to the table sign_sign
      */
     public function getSource()
     {
-        return 'isign_sign';
+        return 'sign_sign';
     }
     public function reorganize(array $data)
     {

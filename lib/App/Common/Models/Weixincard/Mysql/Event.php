@@ -8,11 +8,11 @@ class Event extends Base
 
     /**
      * 微信卡券-事件推送
-     * This model is mapped to the table iweixincard_event
+     * This model is mapped to the table weixincard_event
      */
     public function getSource()
     {
-        return 'iweixincard_event';
+        return 'weixincard_event';
     }
 
     public function reorganize(array $data)

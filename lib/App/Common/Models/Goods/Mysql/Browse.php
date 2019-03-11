@@ -8,11 +8,11 @@ class Browse extends Base
 
     /**
      * 商品浏览历史表管理
-     * This model is mapped to the table igoods_browse
+     * This model is mapped to the table goods_browse
      */
     public function getSource()
     {
-        return 'igoods_browse';
+        return 'goods_browse';
     }
 
     public function reorganize(array $data)

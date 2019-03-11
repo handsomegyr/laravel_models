@@ -8,11 +8,11 @@ class OrderCommon extends Base
 
     /**
      * 订单-订单扩展信息表管理
-     * This model is mapped to the table iorder_common
+     * This model is mapped to the table order_common
      */
     public function getSource()
     {
-        return 'iorder_common';
+        return 'order_common';
     }
 
     public function reorganize(array $data)

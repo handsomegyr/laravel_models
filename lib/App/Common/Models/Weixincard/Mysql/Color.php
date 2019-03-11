@@ -8,10 +8,10 @@ class Color extends Base
 
     /**
      * 微信卡券-颜色
-     * This model is mapped to the table iweixincard_color
+     * This model is mapped to the table weixincard_color
      */
     public function getSource()
     {
-        return 'iweixincard_color';
+        return 'weixincard_color';
     }
 }

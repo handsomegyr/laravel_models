@@ -8,11 +8,11 @@ class Log extends Base
 
     /**
      * 砍价-日志
-     * This model is mapped to the table ibargain_log
+     * This model is mapped to the table bargain_log
      */
     public function getSource()
     {
-        return 'ibargain_log';
+        return 'bargain_log';
     }
 
     public function reorganize(array $data)

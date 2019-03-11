@@ -8,11 +8,11 @@ class Source extends Base
 
     /**
      * 微信原始数据
-     * This model is mapped to the table iweixin_source
+     * This model is mapped to the table weixin_source
      */
     public function getSource()
     {
-        return 'iweixin_source';
+        return 'weixin_source';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Poi extends Base
 
     /**
      * 微信卡券-POI门店
-     * This model is mapped to the table iweixincard_poi
+     * This model is mapped to the table weixincard_poi
      */
     public function getSource()
     {
-        return 'iweixincard_poi';
+        return 'weixincard_poi';
     }
 
     public function reorganize(array $data)

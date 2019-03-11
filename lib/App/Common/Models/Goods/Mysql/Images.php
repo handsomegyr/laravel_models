@@ -8,11 +8,11 @@ class Images extends Base
 
     /**
      * 商品图片表管理
-     * This model is mapped to the table igoods_images
+     * This model is mapped to the table goods_images
      */
     public function getSource()
     {
-        return 'igoods_images';
+        return 'goods_images';
     }
 
     public function reorganize(array $data)

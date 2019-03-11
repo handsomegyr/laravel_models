@@ -8,11 +8,11 @@ class MsgStatistics extends Base
 
     /**
      * 消息-消息表管理
-     * This model is mapped to the table imessage_msg_statistics
+     * This model is mapped to the table message_msg_statistics
      */
     public function getSource()
     {
-        return 'imessage_msg_statistics';
+        return 'message_msg_statistics';
     }
 
     public function reorganize(array $data)

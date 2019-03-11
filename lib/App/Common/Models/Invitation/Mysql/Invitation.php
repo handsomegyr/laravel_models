@@ -8,11 +8,11 @@ class Invitation extends Base
 
     /**
      * 微信邀请-邀请函表管理
-     * This model is mapped to the table iinvitation_invitation
+     * This model is mapped to the table invitation_invitation
      */
     public function getSource()
     {
-        return 'iinvitation_invitation';
+        return 'invitation_invitation';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Redpack extends Base
 
     /**
      * 微信红包-红包信息
-     * This model is mapped to the table iweixinredpack_redpack
+     * This model is mapped to the table weixinredpack_redpack
      */
     public function getSource()
     {
-        return 'iweixinredpack_redpack';
+        return 'weixinredpack_redpack';
     }
 
     public function reorganize(array $data)

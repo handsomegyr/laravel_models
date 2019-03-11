@@ -8,11 +8,11 @@ class User extends Base
 
     /**
      * 微信用户
-     * This model is mapped to the table iweixin_user
+     * This model is mapped to the table weixin_user
      */
     public function getSource()
     {
-        return 'iweixin_user';
+        return 'weixin_user';
     }
 
     public function reorganize(array $data)

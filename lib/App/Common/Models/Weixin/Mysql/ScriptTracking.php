@@ -8,10 +8,10 @@ class ScriptTracking extends Base
 
     /**
      * 微信执行时间跟踪统计
-     * This model is mapped to the table iweixin_script_tracking
+     * This model is mapped to the table weixin_script_tracking
      */
     public function getSource()
     {
-        return 'iweixin_script_tracking';
+        return 'weixin_script_tracking';
     }
 }

@@ -8,11 +8,11 @@ class SysMsg extends Base
 
     /**
      * 消息-系统消息表管理
-     * This model is mapped to the table imessage_sysmsg
+     * This model is mapped to the table message_sysmsg
      */
     public function getSource()
     {
-        return 'imessage_sysmsg';
+        return 'message_sysmsg';
     }
 
     public function reorganize(array $data)

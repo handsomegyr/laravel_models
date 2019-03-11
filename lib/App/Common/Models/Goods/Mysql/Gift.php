@@ -8,11 +8,11 @@ class Gift extends Base
 
     /**
      * 商品赠品表管理
-     * This model is mapped to the table igoods_gift
+     * This model is mapped to the table goods_gift
      */
     public function getSource()
     {
-        return 'igoods_gift';
+        return 'goods_gift';
     }
 
     public function reorganize(array $data)

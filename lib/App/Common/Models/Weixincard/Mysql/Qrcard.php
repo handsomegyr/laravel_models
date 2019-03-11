@@ -8,11 +8,11 @@ class Qrcard extends Base
 
     /**
      * 微信卡券-卡券二维码
-     * This model is mapped to the table iweixincard_qrcard
+     * This model is mapped to the table weixincard_qrcard
      */
     public function getSource()
     {
-        return 'iweixincard_qrcard';
+        return 'weixincard_qrcard';
     }
 
     public function reorganize(array $data)

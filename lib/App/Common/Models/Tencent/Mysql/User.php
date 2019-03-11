@@ -8,10 +8,10 @@ class User extends Base
 
     /**
      * 腾讯-用户表管理
-     * This model is mapped to the table itencent_user
+     * This model is mapped to the table tencent_user
      */
     public function getSource()
     {
-        return 'itencent_user';
+        return 'tencent_user';
     }
 }

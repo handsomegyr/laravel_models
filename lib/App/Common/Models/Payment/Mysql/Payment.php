@@ -8,11 +8,11 @@ class Payment extends Base
 
     /**
      * 支付-支付方式表管理
-     * This model is mapped to the table ipayment_payment
+     * This model is mapped to the table payment_payment
      */
     public function getSource()
     {
-        return 'ipayment_payment';
+        return 'payment_payment';
     }
     
     public function reorganize(array $data)

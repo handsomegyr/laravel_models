@@ -8,11 +8,11 @@ class Limit extends Base
 
     /**
      * 抽奖参与者中奖限制
-     * This model is mapped to the table ilottery_limit
+     * This model is mapped to the table lottery_limit
      */
     public function getSource()
     {
-        return 'ilottery_limit';
+        return 'lottery_limit';
     }
 
     public function reorganize(array $data)

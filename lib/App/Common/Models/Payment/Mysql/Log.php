@@ -8,11 +8,11 @@ class Log extends Base
 
     /**
      * 支付-支付日志表管理
-     * This model is mapped to the table ipayment_log
+     * This model is mapped to the table payment_log
      */
     public function getSource()
     {
-        return 'ipayment_log';
+        return 'payment_log';
     }
 
     public function reorganize(array $data)

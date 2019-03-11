@@ -8,11 +8,11 @@ class Goods extends Base
 
     /**
      * 商品表管理
-     * This model is mapped to the table igoods_goods
+     * This model is mapped to the table goods_goods
      */
     public function getSource()
     {
-        return 'igoods_goods';
+        return 'goods_goods';
     }
 
     public function reorganize(array $data)

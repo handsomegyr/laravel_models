@@ -8,11 +8,11 @@ class Ad extends Base
 
     /**
      * 商品广告位表管理
-     * This model is mapped to the table igoods_ad
+     * This model is mapped to the table goods_ad
      */
     public function getSource()
     {
-        return 'igoods_ad';
+        return 'goods_ad';
     }
 
     public function reorganize(array $data)

@@ -8,10 +8,10 @@ class Category extends Base
 
     /**
      * 积分-积分分类表管理
-     * This model is mapped to the table ipoints_category
+     * This model is mapped to the table points_category
      */
     public function getSource()
     {
-        return 'ipoints_category';
+        return 'points_category';
     }
 }

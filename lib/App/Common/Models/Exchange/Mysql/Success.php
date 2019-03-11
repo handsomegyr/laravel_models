@@ -8,11 +8,11 @@ class Success extends Base
 
     /**
      * 兑换-成功记录
-     * This model is mapped to the table iexchange_success
+     * This model is mapped to the table exchange_success
      */
     public function getSource()
     {
-        return 'iexchange_success';
+        return 'exchange_success';
     }
 
     public function reorganize(array $data)

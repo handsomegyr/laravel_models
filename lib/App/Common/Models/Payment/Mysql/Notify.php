@@ -8,11 +8,11 @@ class Notify extends Base
 
     /**
      * 支付-支付通知表管理
-     * This model is mapped to the table ipayment_notify
+     * This model is mapped to the table payment_notify
      */
     public function getSource()
     {
-        return 'ipayment_notify';
+        return 'payment_notify';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class User extends Base
 
     /**
      * 直播-用户管理
-     * This model is mapped to the table ilive_user
+     * This model is mapped to the table live_user
      */
     public function getSource()
     {
-        return 'ilive_user';
+        return 'live_user';
     }
 
     public function reorganize(array $data)

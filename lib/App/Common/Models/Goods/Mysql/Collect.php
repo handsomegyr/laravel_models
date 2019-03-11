@@ -8,11 +8,11 @@ class Collect extends Base
 
     /**
      * 商品关注表管理
-     * This model is mapped to the table igoods_collect
+     * This model is mapped to the table goods_collect
      */
     public function getSource()
     {
-        return 'igoods_collect';
+        return 'goods_collect';
     }
 
     public function reorganize(array $data)

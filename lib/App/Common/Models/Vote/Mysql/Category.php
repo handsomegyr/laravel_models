@@ -8,11 +8,11 @@ class Category extends Base
 
     /**
      * 投票-类型表管理
-     * This model is mapped to the table ivote_category
+     * This model is mapped to the table vote_category
      */
     public function getSource()
     {
-        return 'ivote_category';
+        return 'vote_category';
     }
 }
 

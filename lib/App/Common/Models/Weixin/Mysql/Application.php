@@ -8,11 +8,11 @@ class Application extends Base
 
     /**
      * 微信应用管理
-     * This model is mapped to the table iweixin_application
+     * This model is mapped to the table weixin_application
      */
     public function getSource()
     {
-        return 'iweixin_application';
+        return 'weixin_application';
     }
 
     public function reorganize(array $data)

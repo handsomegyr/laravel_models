@@ -8,11 +8,11 @@ class Callbackurls extends Base
 
     /**
      * 支付宝-回调地址安全域名管理
-     * This model is mapped to the table ialipay_callbackurls
+     * This model is mapped to the table alipay_callbackurls
      */
     public function getSource()
     {
-        return 'ialipay_callbackurls';
+        return 'alipay_callbackurls';
     }
 
     public function reorganize(array $data)

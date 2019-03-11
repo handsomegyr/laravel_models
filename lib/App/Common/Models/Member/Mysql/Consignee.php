@@ -8,11 +8,11 @@ class Consignee extends Base
 
     /**
      * 会员-收货人管理
-     * This model is mapped to the table imember_consignee
+     * This model is mapped to the table member_consignee
      */
     public function getSource()
     {
-        return 'imember_consignee';
+        return 'member_consignee';
     }
 
     public function reorganize(array $data)

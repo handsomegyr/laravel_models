@@ -8,11 +8,11 @@ class Job extends Base
 
     /**
      * 计划任务表管理
-     * This model is mapped to the table icronjob_job
+     * This model is mapped to the table cronjob_job
      */
     public function getSource()
     {
-        return 'icronjob_job';
+        return 'cronjob_job';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class News extends Base
 
     /**
      * 会员-动态管理
-     * This model is mapped to the table imember_news
+     * This model is mapped to the table member_news
      */
     public function getSource()
     {
-        return 'imember_news';
+        return 'member_news';
     }
 
     public function reorganize(array $data)

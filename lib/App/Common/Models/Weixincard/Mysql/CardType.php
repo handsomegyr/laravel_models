@@ -8,10 +8,10 @@ class CardType extends Base
 
     /**
      * 微信卡券-卡券类别
-     * This model is mapped to the table iweixincard_card_type
+     * This model is mapped to the table weixincard_card_type
      */
     public function getSource()
     {
-        return 'iweixincard_card_type';
+        return 'weixincard_card_type';
     }
 }

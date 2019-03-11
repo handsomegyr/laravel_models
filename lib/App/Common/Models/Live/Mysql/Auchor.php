@@ -8,11 +8,11 @@ class Auchor extends Base
 
     /**
      * 直播-主播管理
-     * This model is mapped to the table ilive_auchor
+     * This model is mapped to the table live_auchor
      */
     public function getSource()
     {
-        return 'ilive_auchor';
+        return 'live_auchor';
     }
 
     public function reorganize(array $data)

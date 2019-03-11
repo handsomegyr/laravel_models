@@ -8,11 +8,11 @@ class Item extends Base
 
     /**
      * 投票-选项表管理
-     * This model is mapped to the table ivote_item
+     * This model is mapped to the table vote_item
      */
     public function getSource()
     {
-        return 'ivote_item';
+        return 'vote_item';
     }
 
     public function reorganize(array $data)

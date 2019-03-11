@@ -8,11 +8,11 @@ class Log extends Base
 
     /**
      * 计划任务执行日志管理
-     * This model is mapped to the table icronjob_log
+     * This model is mapped to the table cronjob_log
      */
     public function getSource()
     {
-        return 'icronjob_log';
+        return 'cronjob_log';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Member extends Base
 
     /**
      * 会员-会员管理
-     * This model is mapped to the table imember_member
+     * This model is mapped to the table member_member
      */
     public function getSource()
     {
-        return 'imember_member';
+        return 'member_member';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Settings extends Base
 
     /**
      * 短信-短信设置表管理
-     * This model is mapped to the table isms_settings
+     * This model is mapped to the table sms_settings
      */
     public function getSource()
     {
-        return 'isms_settings';
+        return 'sms_settings';
     }
 
     public function reorganize(array $data)

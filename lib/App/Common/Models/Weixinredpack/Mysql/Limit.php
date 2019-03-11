@@ -8,11 +8,11 @@ class Limit extends Base
 
     /**
      * 微信红包-活动规则限制
-     * This model is mapped to the table iweixinredpack_limit
+     * This model is mapped to the table weixinredpack_limit
      */
     public function getSource()
     {
-        return 'iweixinredpack_limit';
+        return 'weixinredpack_limit';
     }
 
     public function reorganize(array $data)

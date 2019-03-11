@@ -8,11 +8,11 @@ class Brand extends Base
 
     /**
      * 商品品牌表管理
-     * This model is mapped to the table igoods_brand
+     * This model is mapped to the table goods_brand
      */
     public function getSource()
     {
-        return 'igoods_brand';
+        return 'goods_brand';
     }
 
     public function reorganize(array $data)

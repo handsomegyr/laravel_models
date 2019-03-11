@@ -8,11 +8,11 @@ class Cart extends Base
 
     /**
      * 订单-购物车表管理
-     * This model is mapped to the table iorder_cart
+     * This model is mapped to the table order_cart
      */
     public function getSource()
     {
-        return 'iorder_cart';
+        return 'order_cart';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Spec extends Base
 
     /**
      * 商品规格表管理
-     * This model is mapped to the table igoods_spec
+     * This model is mapped to the table goods_spec
      */
     public function getSource()
     {
-        return 'igoods_spec';
+        return 'goods_spec';
     }
 
     public function reorganize(array $data)

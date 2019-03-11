@@ -8,11 +8,11 @@ class Rule extends Base
 
     /**
      * 兑换-规则
-     * This model is mapped to the table iexchange_rule
+     * This model is mapped to the table exchange_rule
      */
     public function getSource()
     {
-        return 'iexchange_rule';
+        return 'exchange_rule';
     }
 
     public function reorganize(array $data)

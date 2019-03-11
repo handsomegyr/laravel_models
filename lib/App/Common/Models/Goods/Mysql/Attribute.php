@@ -8,11 +8,11 @@ class Attribute extends Base
 
     /**
      * 商品属性表管理
-     * This model is mapped to the table igoods_attribute
+     * This model is mapped to the table goods_attribute
      */
     public function getSource()
     {
-        return 'igoods_attribute';
+        return 'goods_attribute';
     }
 
     public function reorganize(array $data)

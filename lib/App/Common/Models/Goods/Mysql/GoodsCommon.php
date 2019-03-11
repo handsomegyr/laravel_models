@@ -8,11 +8,11 @@ class GoodsCommon extends Base
 
     /**
      * 商品公共内容表管理
-     * This model is mapped to the table igoods_common
+     * This model is mapped to the table goods_common
      */
     public function getSource()
     {
-        return 'igoods_common';
+        return 'goods_common';
     }
 
     public function reorganize(array $data)

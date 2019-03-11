@@ -8,11 +8,11 @@ class Application extends Base
 
     /**
      * 支付宝-应用设置管理
-     * This model is mapped to the table ialipay_application
+     * This model is mapped to the table alipay_application
      */
     public function getSource()
     {
-        return 'ialipay_application';
+        return 'alipay_application';
     }
 
     public function reorganize(array $data)

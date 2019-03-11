@@ -8,11 +8,11 @@ class Scene extends Base
 
     /**
      * 微信二维码场景管理
-     * This model is mapped to the table iweixin_scene
+     * This model is mapped to the table weixin_scene
      */
     public function getSource()
     {
-        return 'iweixin_scene';
+        return 'weixin_scene';
     }
 
     public function reorganize(array $data)

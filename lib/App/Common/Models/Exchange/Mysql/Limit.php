@@ -8,11 +8,11 @@ class Limit extends Base
 
     /**
      * 兑换-限制
-     * This model is mapped to the table iexchange_limit
+     * This model is mapped to the table exchange_limit
      */
     public function getSource()
     {
-        return 'iexchange_limit';
+        return 'exchange_limit';
     }
 
     public function reorganize(array $data)

@@ -12,7 +12,7 @@ class ErrorLog extends Base
      */
     public function getSource()
     {
-        return 'iactivity_errorlog';
+        return 'activity_errorlog';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class Log extends Base
 
     /**
      * 订单-日志表管理
-     * This model is mapped to the table iorder_log
+     * This model is mapped to the table order_log
      */
     public function getSource()
     {
-        return 'iorder_log';
+        return 'order_log';
     }
 
     public function reorganize(array $data)

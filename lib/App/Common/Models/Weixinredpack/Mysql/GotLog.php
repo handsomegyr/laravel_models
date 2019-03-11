@@ -8,11 +8,11 @@ class GotLog extends Base
 
     /**
      * 微信红包-发放记录
-     * This model is mapped to the table iweixinredpack_got_log
+     * This model is mapped to the table weixinredpack_got_log
      */
     public function getSource()
     {
-        return 'iweixinredpack_got_log';
+        return 'weixinredpack_got_log';
     }
 
     public function reorganize(array $data)

@@ -8,11 +8,11 @@ class SpecValue extends Base
 
     /**
      * 商品规格值表管理
-     * This model is mapped to the table igoods_spec_value
+     * This model is mapped to the table goods_spec_value
      */
     public function getSource()
     {
-        return 'igoods_spec_value';
+        return 'goods_spec_value';
     }
 
     public function reorganize(array $data)

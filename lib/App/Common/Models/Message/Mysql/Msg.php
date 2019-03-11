@@ -8,11 +8,11 @@ class Msg extends Base
 
     /**
      * 消息-消息表管理
-     * This model is mapped to the table imessage_msg
+     * This model is mapped to the table message_msg
      */
     public function getSource()
     {
-        return 'imessage_msg';
+        return 'message_msg';
     }
 
     public function reorganize(array $data)

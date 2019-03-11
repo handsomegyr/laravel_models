@@ -8,11 +8,11 @@ class Keyword extends Base
 
     /**
      * 微信关键词设定
-     * This model is mapped to the table iweixin_keyword
+     * This model is mapped to the table weixin_keyword
      */
     public function getSource()
     {
-        return 'iweixin_keyword';
+        return 'weixin_keyword';
     }
     
     public function reorganize(array $data)

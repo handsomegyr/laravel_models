@@ -8,11 +8,11 @@ class QuestionItem extends Base
 
     /**
      * 问卷-题目选项管理
-     * This model is mapped to the table iquestionnaire_question_item
+     * This model is mapped to the table questionnaire_question_item
      */
     public function getSource()
     {
-        return 'iquestionnaire_question_item';
+        return 'questionnaire_question_item';
     }
 
     public function reorganize(array $data)

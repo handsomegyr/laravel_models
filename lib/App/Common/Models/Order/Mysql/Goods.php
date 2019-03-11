@@ -8,11 +8,11 @@ class Goods extends Base
 
     /**
      * 订单-商品表管理
-     * This model is mapped to the table iorder_goods
+     * This model is mapped to the table order_goods
      */
     public function getSource()
     {
-        return 'iorder_goods';
+        return 'order_goods';
     }
 
     public function reorganize(array $data)

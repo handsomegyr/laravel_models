@@ -8,10 +8,10 @@ class AppKey extends Base
 
     /**
      * 腾讯-应用密码表管理
-     * This model is mapped to the table itencent_appkey
+     * This model is mapped to the table tencent_appkey
      */
     public function getSource()
     {
-        return 'itencent_appkey';
+        return 'tencent_appkey';
     }
 }

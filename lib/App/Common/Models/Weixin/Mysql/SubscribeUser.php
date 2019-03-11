@@ -8,10 +8,10 @@ class SubscribeUser extends Base
 
     /**
      * 微信关注用户
-     * This model is mapped to the table iweixin_subscribe_user
+     * This model is mapped to the table weixin_subscribe_user
      */
     public function getSource()
     {
-        return 'iweixin_subscribe_user';
+        return 'weixin_subscribe_user';
     }
 }

@@ -8,10 +8,10 @@ class Record extends Base
 
     /**
      * 抽奖原始记录
-     * This model is mapped to the table ilottery_record
+     * This model is mapped to the table lottery_record
      */
     public function getSource()
     {
-        return 'ilottery_record';
+        return 'lottery_record';
     }
 }
