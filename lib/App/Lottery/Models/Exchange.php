@@ -6,6 +6,7 @@ class Exchange extends \App\Common\Models\Lottery\Exchange
 
     private $_exchanges = null;
 
+    
     /**
      * 检测当前信息是否存在
      *
@@ -20,6 +21,20 @@ class Exchange extends \App\Common\Models\Lottery\Exchange
         ));
     }
 
+    /**
+     * 根据win_code检测当前信息是否存在
+     *
+     * @param string $user_id
+     * @param string $win_code
+     */
+    public function checkExchangeByWincode($user_id, $win_code)
+    {
+        return $this->findOne(array(
+            'win_code' => ($win_code),
+            'user_id' => $user_id
+        ));
+    }
+    
     /**
      * 获取指定用户的全部中奖纪录
      *
@@ -156,6 +171,8 @@ class Exchange extends \App\Common\Models\Lottery\Exchange
             $data['contact_mobile'] = $user_contact['mobile'];
             $data['contact_address'] = $user_contact['address'];
         }
+        $data['win_code'] = $this->createWinCode();
+        
         $data['memo'] = $memo;
         return $this->insert($data);
     }
@@ -279,6 +296,12 @@ class Exchange extends \App\Common\Models\Lottery\Exchange
         
         $list = $this->findAll($query);
         return $list;
+    }
+
+    private function createWinCode()
+    {
+        $orderId = date('ymdHis') . (substr(microtime(true) * 10000, - 3, 3)) . rand(1000, 9999);
+        return $orderId;
     }
 
     /**

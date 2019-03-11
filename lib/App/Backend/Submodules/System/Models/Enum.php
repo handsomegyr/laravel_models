@@ -45,7 +45,7 @@ class Enum extends \App\Common\Models\System\Enum
         if (! empty($list)) {
             foreach ($list as $item) {
                 $pkey = "p:" . (empty($item['pid']) ? "0" : $item['pid']);
-                $key = ($item['id']);
+                $key = "k:" . ($item['id']);
                 $enumList[$pkey][$key] = $item;
             }
         }
@@ -87,7 +87,7 @@ class Enum extends \App\Common\Models\System\Enum
                 $item['has_children'] = empty($enumList["p:" . $item['enum_id']]);
                 
                 $list[] = $item;
-                $list2 = $this->recursiveGet($enumList, $key, $level + 1);
+                $list2 = $this->recursiveGet($enumList, $item['id'], $level + 1);
                 if (! empty($list2)) {
                     $list = array_merge($list, $list2);
                 }

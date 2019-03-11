@@ -160,6 +160,7 @@ class Api
                 
                 // 记录信息
                 $exchangeInfo = $this->_exchange->record($activity_id, $rule['prize_id'], $prizeInfo, $prizeCode, $identity_id, $user_info, $identityContact, $isValid, $source, $memo);
+                
                 if (! empty($exchangeInfo)) {
                     $exchangeInfo['exchange_id'] = $exchangeInfo['id'];
                 } else {
@@ -173,6 +174,7 @@ class Api
                     }
                 }
                 $this->_exchange->commit();
+                
                 $this->_record->record($activity_id, $identity_id, $source, 1, "恭喜您中奖了！");
                 $ret['result'] = $exchangeInfo;
             } catch (\Exception $e) {

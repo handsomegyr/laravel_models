@@ -247,7 +247,9 @@ class Impl1 extends Base
         $criteria = array();
         if (isset($options['query'])) {
             $criteria = $options['query'];
+            $criteria = $this->appendSoftDeleteConditions($criteria);
         }
+        
         if (empty($criteria)) {
             throw new \Exception("query condition is empty in findAndModify", - 999);
         }
@@ -270,9 +272,9 @@ class Impl1 extends Base
         
         try {
             $this->begin();
+            
             // 获取单条记录
             $info = $this->findOne($criteria);
-            
             // 如果没有找到的话
             if (empty($info)) {
                 // 如果需要插入的话
@@ -324,24 +326,31 @@ class Impl1 extends Base
     protected function executeQuery($phql, array $data, $method = 'select')
     {
         try {
+            // 排除isnull 和isnotnull绑定
+            $data2 = array();
+            foreach ($data as $bkey => $value) {
+                if ($value === '__ISNULL__' || $value === '__ISNOTNULL__') {
+                    continue;
+                } else {
+                    $data2[$bkey] = $value;
+                }
+            }
+            
             $phql = preg_replace('/:(.*?):/i', ':$1', $phql);
             $phql = preg_replace('/\[(.*?)\]/i', '`$1`', $phql);
             if ($this->getDebug()) {
                 echo "<pre><br/>";
                 echo $phql . "<br/>";
                 var_dump($data);
+                var_dump($data2);
                 die('OK');
             }
             
             $conn = $this->getDbConnection();
             // var_dump($db);
             $conn->setFetchMode(PDO::FETCH_ASSOC);
-            // print_r($data);
-            // die($phql);
-            $result = $conn->$method($phql, $data);
-            // var_dump($result);
-            // print_r($data);
-            // die($phql);
+            $result = $conn->$method($phql, $data2);
+            
             if ($method == "insert") {
                 if ($result) {
                     $result = $conn->getPdo()->lastInsertId();
@@ -351,7 +360,12 @@ class Impl1 extends Base
             }
             return $result;
         } catch (\Exception $e) {
-            throw $e;
+            if (is_numeric($e->getCode())) {
+                throw $e;
+            } else {
+                $errorMsg = "error code:{$e->getCode()},error msg:{$e->getMessage()}";
+                throw new \Exception($errorMsg, - 999);
+            }
         }
     }
 

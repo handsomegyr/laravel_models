@@ -131,14 +131,14 @@ trait BaseTrait
                             // 解决is null查询
                             // $conditions[] = "{$fieldKey} IS :isnull_{$bindKey}:";
                             $conditions[] = "{$fieldKey} IS NULL";
-                            $bind['isnull_' . $bindKey] = "__NULL__";
+                            $bind['isnull_' . $bindKey] = "__ISNULL__";
                         }
                         
                         if ($op == '$isnotnull') {
                             // 解决is not null查询
                             // $conditions[] = "{$fieldKey} IS NOT :isnotnull_{$bindKey}:";
                             $conditions[] = "{$fieldKey} IS NOT NULL";
-                            $bind['isnotnull_' . $bindKey] = "__NULL__";
+                            $bind['isnotnull_' . $bindKey] = "__ISNOTNULL__";
                         }
                     }
                 } else {
@@ -155,11 +155,6 @@ trait BaseTrait
         if (empty($bind)) {
             return array();
         } else {
-            foreach ($bind as $bkey => $item) {
-                if ($item == '__NULL__') {
-                    unset($bind[$bkey]);
-                }
-            }
             return array_merge(array(
                 'conditions' => '(' . implode(" {$condition_op} ", $conditions) . ')',
                 'bind' => $bind
